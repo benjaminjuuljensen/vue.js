@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+<style>
+
+.red {
+    color: red;
+}
+.border {
+    border: 1px solid #000000;
+}
+.active {
+    color: aqua;
+}
+.text-danger {
+    border: 1px solid red;
+}
+</style>
+
+
+
+
+<div id="app">
+    <h1>{{title}}</h1>
+    <h2>{{name}}</h2>
+    <p>{{hils()}}</p>
+    <div :class="classes">Halløj</div>
+
+    <a :href="url">YouTube</a>
+
+    <div :class="{active: isActive}">Halløj2</div>
+    
+
+    <div
+        :class="{active: isActive, 'text-danger': hasError}"
+        @mouseover="hasError = false"
+        @mouseout="hasError = true"
+    >
+    Halløj3
+</div>
+
+<button :class="{active: isActive}" @click="changeColor()">changeColor</button>
+
+</div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
